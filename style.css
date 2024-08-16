@@ -2,19 +2,184 @@
 :root{
     /* == COLORS PRIMARY == */
     --Light-red: hsl(0, 100%, 67%);
+    --Light-red-05: hsla(0, 100%, 67%, 0.05);
     --Orangey-yellow: hsl(39, 100%, 56%);
+    --Orangey-yellow-05: hsla(39, 100%, 56%, 0.05);
     --Green-teal: hsl(166, 100%, 37%);
+    --Green-teal-05: hsla(166, 100%, 37%, 0.05);
     --Cobalt-blue: hsl(234, 85%, 45%);
+    --Cobalt-blue-05: hsla(234, 85%, 45%, 0.05);
     /* == COLORS GRADIENTS BASE == */
     --Light-slate-blue : hsl(252, 100%, 67%); /* (background) */
     --Light-royal-blue : hsl(241, 81%, 54%); /* (background) */
-    --Violet-blue: hsla(256, 72%, 46%, 1); /* (circle) */
+    --Violet-blue : hsla(256, 72%, 46%, 1); /* (circle) */
     --Persian-blue : hsla(241, 72%, 46%, 0); /* (circle) */
     /* == COLORS NEUTRAL == */
     --White: hsl(0, 0%, 100%);
     --Pale-blue: hsl(221, 100%, 96%);
     --Light-lavender: hsl(241, 100%, 89%);
     --Dark-gray-blue: hsl(224, 30%, 27%);
+    --Dark-gray-blue-60: hsla(224, 30%, 27%, 0.6);
     /* == FONT == */
     --main-font : 'Hanken Grotesk';
+}
+*{
+    box-sizing: border-box;
+    font-family: var(--main-font), 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 16px;
+    line-height: 21px;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: var(--Pale-blue);
+}
+main{
+    flex-grow: 1;
+}
+footer{
+    text-align: center;
+}
+.result__container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 24px 30px 40px 30px;
+    color: var(--White);
+    background: linear-gradient(var(--Light-slate-blue), var(--Light-royal-blue));
+    border-radius: 0 0 32px 32px;
+}
+.result__title{
+    font-size: 18px;
+    line-height: 23px;
+    color: var(--Light-lavender);
+}
+.result__number-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 24px;
+    width: 140px;
+    height: 140px;
+    background: linear-gradient(var(--Violet-blue), var(--Persian-blue));
+    border-radius: 50%;
+}
+.result__number-my{
+    font-size: 56px;
+    line-height: 72px;
+    font-weight: 800;
+}
+.result__number-max{
+    font-weight: 700;
+    color: var(--Light-lavender);
+}
+.result__appreciation{
+    margin-bottom: 8px;
+    font-size: 24px;
+    line-height: 31px;
+    font-weight: 700px;
+}
+.result__explanation{
+    width: 260px;
+    font-weight: 500;
+    color: var(--Light-lavender);
+}
+.detail{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 24px 30px 30px 30px;
+}
+.detail__title{
+    margin-bottom: 24px;
+    align-self: self-start;
+    font-size: 18px;
+    line-height: 23px;
+    font-weight: 700;
+    color: var(--Dark-gray-blue);
+}
+.detail__list{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.detail__list-item{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    margin-top: 16px;
+    padding: 0 16px;
+    width: 100%;
+    height: 56px;
+    font-weight: 500;
+    border-radius: 12px;
+}
+.detail__list-item:first-child{
+    margin-top: 0;
+}
+.detail__list-icon{
+    margin-right: 16px;
+    width: 20px;
+    height: 20px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+#reaction{
+    color: var(--Light-red);
+    background-color: var(--Light-red-05);
+}
+#storm{
+    background-image: url('./assets/images/icon-reaction.svg');
+}
+#memory{
+    color: var(--Orangey-yellow);
+    background-color: var(--Orangey-yellow-05);
+}
+#brain{
+    background-image: url('./assets/images/icon-memory.svg');
+}
+#verbal{
+    color: var(--Green-teal);
+    background-color: var(--Green-teal-05);
+}
+#bubble{
+    background-image: url('./assets/images/icon-verbal.svg');
+}
+#visual{
+    color: var(--Cobalt-blue);
+    background-color: var(--Cobalt-blue-05);
+}
+#eye{
+    background-image: url('./assets/images/icon-visual.svg');
+}
+.detail__list-percent{
+    margin-left: auto;
+    margin-right: 0;
+    color: var(--Dark-gray-blue-60);
+    font-weight: 700;
+}
+.detail__list-value{
+    color: var(--Dark-gray-blue);
+}
+.detail__cta{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 24px;
+    width: 100%;
+    height: 56px;
+    font-size: 18px;
+    line-height: 23px;
+    font-weight: 700;
+    color: var(--White);
+    background-color: var(--Dark-gray-blue);
+    border: none;
+    border-radius: 128px;
+
+
 }

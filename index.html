@@ -1,33 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
   <link rel="stylesheet" href="normalize.css">
   <link rel="stylesheet" href="style.css">
-  
+
   <title>Frontend Mentor | Results summary component</title>
 </head>
+
 <body>
   <main>
     <section class="result__container">
-      <h1>Your Result</h1>
-      <div class="result__number">
-        76<span>of 100</span>
+      <h1 class="result__title">Your Result</h1>
+      <div class="result__number-container">
+        <p class="result__number-my">76</p>
+        <p class="result__number-max">of 100</p>
       </div>
       <h2 class="result__appreciation">Great</h2>
-      <p class="result__explanation">You scored higher than 65% of the people who have taken these tests.</p>
+      <p class="result__explanation">You scored higher than 65% of the people who have taken these tests!</p>
     </section>
     <section class="detail">
       <h3 class="detail__title">Summary</h3>
-      <ul class="detail__list">
-        <li class="detail__list-item">Reaction <span class="detail__list-percent">80 / 100</span></li>
-        <li class="detail__list-item">Memory <span class="detail__list-percent">92 / 100</span></li>
-        <li class="detail__list-item">Verbal <span class="detail__list-percent">61 / 100</span></li>
-        <li class="detail__list-item">Visual <span class="detail__list-percent">72 / 100</span></li>
-      </ul>
+      <div class="detail__list">
+        <div id="reaction" class="detail__list-item">
+          <span id="storm" class="detail__list-icon"></span>Reaction
+          <span class="detail__list-percent">
+            <span class="detail__list-value">80</span> / 100
+          </span>
+        </div>
+        <div id="memory" class="detail__list-item">
+          <span id="brain" class="detail__list-icon"></span>Memory
+          <span class="detail__list-percent">
+            <span class="detail__list-value">92</span> / 100
+          </span>
+        </div>
+        <div id="verbal" class="detail__list-item">
+          <span id="bubble" class="detail__list-icon"></span>Verbal
+          <span class="detail__list-percent">
+            <span class="detail__list-value">61</span> / 100
+          </span>
+        </div>
+        <div id="visual" class="detail__list-item">
+          <span id="eye" class="detail__list-icon"></span>Visual
+          <span class="detail__list-percent">
+            <span class="detail__list-value">72</span> / 100
+          </span>
+        </div>
+      </div>
       <button class="detail__cta">Continue</button>
     </section>
   </main>
@@ -39,4 +63,5 @@
     </div>
   </footer>
 </body>
+
 </html>
